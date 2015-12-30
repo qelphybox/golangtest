@@ -1,0 +1,5 @@
+- src: ssh://git@sykav-sr-pr-004.domain.local:7999/ansbl/apt.git
+  scm: git
+
+- src: https://github.com/jlund/ansible-go
+  name: golang

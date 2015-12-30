@@ -1,0 +1,16 @@
+# Окружение для разработки
+---
+- hosts: golang-dev
+  become: yes
+  gather_facts: no
+
+  pre_tasks:
+    - name: "Autofollow to project on logon"
+      lineinfile:
+        dest: "/home/vagrant/.bashrc"
+        regexp: "^cd ~/golang"
+        line: "cd ~/golang"
+
+  roles:
+    - role: apt
+    - role: golang
